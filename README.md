@@ -10,12 +10,11 @@ Oproti odevzdanému schématu jsem našel místa pro zlepšení a změnil názvy
 
 
 #### SQL skripty, které ve zvoleném SŘBD:
-- založí **fyzický datový model**,  
-- naplní datový model **testovacími / ukázkovými daty**,  
-- založí **databázové pohledy**,  
-- reprezentují **alespoň dva testovací scénáře**  
-  (každý scénář v samostatném skriptu),  
-- zruší **fyzický datový model včetně databázových pohledů**.
+- [x] založí **fyzický datový model**,  
+- [x] naplní datový model **testovacími / ukázkovými daty**,  
+- [x] založí **databázové pohledy**,  
+- [ ] reprezentují **alespoň dva testovací scénáře** (každý scénář v samostatném skriptu),  
+- [x] zruší **fyzický datový model včetně databázových pohledů**.
 
 #### Dokumentaci
 - ve formátu **PDF**.
