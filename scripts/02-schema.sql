@@ -105,6 +105,7 @@ CREATE TABLE animal_caretaker
 (
     animal_id INT NOT NULL,
     caretaker_id INT NOT NULL,
+    assigned_at TIMESTAMP default now(),
 
     CONSTRAINT pk_animal_caretaker PRIMARY KEY (animal_id, caretaker_id),
 

@@ -53,13 +53,17 @@ WHERE managed_animal_name IS NULL;
 -- All caretakers and their "responsibility load"
 CREATE VIEW v_caretaker_responsibilities AS
 SELECT
-    c.id as caretaker_id,
-    c.full_name as caretaker_name,
+    c.id,
+    c.full_name,
+    c.info,
     COUNT(ac.caretaker_id) as managed_animals_count
 FROM v_caretakers_full_name c
 LEFT JOIN animal_caretaker ac
     ON ac.caretaker_id = c.id
-GROUP BY c.id, c.full_name;
+GROUP BY
+    c.id,
+    c.full_name,
+    c.info;
 
 
 -- List of all administered treatments, treated animal and responsible caretaker

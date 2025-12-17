@@ -1,14 +1,14 @@
 INSERT INTO caretakers (first_name, last_name, email, phone, info) VALUES
 ('Jan', 'Novák', 'jan.novak@zoo.cz', '+420601123456', 'Vedoucí chovatel savců'),
-('Petra', 'Svobodová', 'petra.svobodova@zoo.cz', '+420602234567', 'Specialistka na plazy'),
+('Petra', 'Svobodová', 'petra.svobodova@zoo.cz', '602234567', 'Specialistka na plazy'),
 ('Tomáš', 'Dvořák', 'tomas.dvorak@zoo.cz', '+420603345678', NULL),
 ('Lucie', 'Králová', 'lucie.kralova@zoo.cz', '+420604456789', 'Veterinární asistentka'),
 ('Martin', 'Černý', 'martin.cerny@zoo.cz', '+420605567890', NULL),
 ('Eva', 'Procházková', 'eva.prochazkova@zoo.cz', '+420606678901', 'Krmení ptactva'),
-('Pavel', 'Beneš', 'pavel.benes@zoo.cz', '+420607789012', NULL),
+('Pavel', 'Beneš', 'pavel.benes@zoo.cz', '607789012', 'Expert na africké savce a hmyz'),
 ('Alena', 'Horáková', 'alena.horakova@zoo.cz', '+420608890123', 'Administrativa'),
 ('Marek', 'Veselý', 'marek.vesely@zoo.cz', '+420609901234', NULL),
-('Ivana', 'Malá', 'ivana.mala@zoo.cz', '+420610012345', 'Zástup za nemocné');
+('Ivana', 'Malá', 'ivana.mala@zoo.cz', '610012345', 'Zástup za nemocné');
 
 INSERT INTO habitats (name, description) VALUES
 ('Africká savana', 'Otevřený výběh pro africké savce'),
@@ -61,35 +61,34 @@ INSERT INTO medications (name, instructions, qty_available, description) VALUES
 INSERT INTO feeding_events
 (animal_id, caretaker_id, feed_item_id, fed_at, feed_item_qty_used, notes)
 VALUES
-(1, 3, 1, '2024-03-01 09:00', 5, NULL),
-(2, 3, 1, '2024-03-01 09:10', 4, 'Menší porce'),
-(3, 1, 3, '2024-03-01 10:00', 8, NULL),
-(4, 2, 8, '2024-03-02 11:30', 2, 'Ruční krmení'),
-(5, 6, 7, '2024-03-02 12:00', 1, NULL),
-(6, 5, 3, '2024-03-02 13:00', 6, NULL),
-(7, 7, 2, '2024-03-03 09:00', 3, NULL),
-(8, 9, 9, '2024-03-03 10:15', 7, 'Děti přítomny'),
-(9, 1, 9, '2024-03-03 11:00', 5, NULL),
-(10, 10, 8, '2024-03-03 20:00', 1, 'Noční krmení');
+(1, 3, 1, NOW() - INTERVAL '85 days' + INTERVAL '9 hours', 5, NULL),
+(2, 3, 1, NOW() - INTERVAL '85 days' + INTERVAL '9 hours 10 minutes', 4, 'Menší porce'),
+(3, 1, 3, NOW() - INTERVAL '80 days' + INTERVAL '10 hours', 8, NULL),
+(4, 2, 8, NOW() - INTERVAL '70 days' + INTERVAL '11 hours 30 minutes', 2, 'Ruční krmení'),
+(5, 6, 7, NOW() - INTERVAL '65 days' + INTERVAL '12 hours', 1, NULL),
+(6, 5, 3, NOW() - INTERVAL '60 days' + INTERVAL '13 hours', 6, NULL),
+(7, 7, 2, NOW() - INTERVAL '45 days' + INTERVAL '9 hours', 3, NULL),
+(8, 9, 9, NOW() - INTERVAL '40 days' + INTERVAL '10 hours 15 minutes', 7, 'Děti přítomny'),
+(9, 1, 9, NOW() - INTERVAL '30 days' + INTERVAL '11 hours', 5, NULL),
+(10, 10, 8, NOW() - INTERVAL '10 days' + INTERVAL '20 hours', 1, 'Noční krmení');
 
 INSERT INTO treatments
 (animal_id, caretaker_id, medication_id, administered_at, medication_qty_used, notes)
 VALUES
-(1, 4, 2, '2024-02-20 08:30', 1, 'Preventivně'),
-(2, 4, 5, '2024-02-21 09:00', 1, NULL),
-(3, 4, 3, '2024-02-22 16:00', 1, 'Vyšetření'),
-(4, 2, 1, '2024-02-23 10:15', 1, NULL),
-(5, 4, 6, '2024-02-24 11:00', 1, 'Drobná rána'),
-(6, 4, 7, '2024-02-25 12:30', 2, NULL),
-(7, 4, 4, '2024-02-26 09:45', 1, NULL),
-(8, 4, 8, '2024-02-27 14:00', 1, 'Dehydratace'),
-(9, 4, 2, '2024-02-28 08:20', 1, NULL),
-(10, 4, 3, '2024-03-01 18:00', 1, 'Noční zákrok');
+(1, 4, 2, NOW() - INTERVAL '88 days' + INTERVAL '8 hours 30 minutes', 1, 'Preventivně'),
+(2, 4, 5, NOW() - INTERVAL '82 days' + INTERVAL '9 hours', 1, NULL),
+(3, 4, 3, NOW() - INTERVAL '78 days' + INTERVAL '16 hours', 1, 'Vyšetření'),
+(4, 2, 1, NOW() - INTERVAL '75 days' + INTERVAL '10 hours 15 minutes', 1, NULL),
+(5, 4, 6, NOW() - INTERVAL '68 days' + INTERVAL '11 hours', 1, 'Drobná rána'),
+(6, 4, 7, NOW() - INTERVAL '60 days' + INTERVAL '12 hours 30 minutes', 2, NULL),
+(7, 4, 4, NOW() - INTERVAL '50 days' + INTERVAL '9 hours 45 minutes', 1, NULL),
+(8, 4, 8, NOW() - INTERVAL '42 days' + INTERVAL '14 hours', 1, 'Dehydratace'),
+(9, 4, 2, NOW() - INTERVAL '35 days' + INTERVAL '8 hours 20 minutes', 1, NULL),
+(10, 4, 3, NOW() - INTERVAL '12 days' + INTERVAL '18 hours', 1, 'Noční zákrok');
 
--- =====================
--- ANIMAL ↔ CARETAKER (pivot) (>=10 rows)
--- =====================
 INSERT INTO animal_caretaker (animal_id, caretaker_id) VALUES
+(1, 3),
+
 (2, 1),
 (2, 5),
 
@@ -117,6 +116,5 @@ INSERT INTO animal_caretaker (animal_id, caretaker_id) VALUES
 (9, 1),
 (9, 10),
 
--- Stín (kaloně) - noční pavilon + vet
 (10, 3),
 (10, 4);
