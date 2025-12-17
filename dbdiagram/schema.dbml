@@ -1,0 +1,79 @@
+Table caretakers {
+  id int [pk, increment]
+  first_name varchar(100) [not null]
+  last_name varchar(100) [not null]
+  email email [not null, unique]
+  phone phone_cz [not null, unique]
+  info text
+}
+
+Table habitats {
+  id int [pk, increment]
+  name varchar(100) [not null, unique]
+  description text
+}
+
+Table animals {
+  id int [pk, increment]
+  habitat_id int [not null]
+  name varchar(100) [not null]
+  species varchar(100) [not null]
+  born_at date [not null]
+}
+
+Table feed_items {
+  id int [pk, increment]
+  name varchar(100) [not null, unique]
+  qty_available int [not null]
+  description text
+}
+
+Table medications {
+  id int [pk, increment]
+  name varchar(100) [not null, unique]
+  instructions text [not null]
+  qty_available int [not null]
+  description text
+}
+
+Table feeding_events {
+  id int [pk, increment]
+  animal_id int [not null]
+  caretaker_id int [not null]
+  feed_item_id int [not null]
+  fed_at timestamp [not null]
+  feed_item_qty_used int [not null]
+  notes text
+}
+
+Table treatments {
+  id int [pk, increment]
+  animal_id int [not null]
+  caretaker_id int [not null]
+  medication_id int [not null]
+  administered_at timestamp [not null]
+  medication_qty_used int [not null]
+  notes text
+}
+
+Table animal_caretaker {
+  animal_id int [not null]
+  caretaker_id int [not null]
+
+  indexes {
+    (animal_id, caretaker_id) [pk]
+  }
+}
+
+Ref: animals.habitat_id > habitats.id
+
+Ref: feeding_events.animal_id > animals.id
+Ref: feeding_events.caretaker_id > caretakers.id
+Ref: feeding_events.feed_item_id > feed_items.id
+
+Ref: treatments.animal_id > animals.id
+Ref: treatments.caretaker_id > caretakers.id
+Ref: treatments.medication_id > medications.id
+
+Ref: animal_caretaker.animal_id > animals.id
+Ref: animal_caretaker.caretaker_id > caretakers.id
