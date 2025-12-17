@@ -22,8 +22,8 @@ CREATE TABLE caretakers
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(254) UNIQUE NOT NULL, -- TODO: regex for email
-    phone VARCHAR(16) UNIQUE NOT NULL, -- TODO: regex for phone with country code enforcement
+    email email UNIQUE NOT NULL,
+    phone phone_cz UNIQUE NOT NULL,
     info TEXT
 );
 
