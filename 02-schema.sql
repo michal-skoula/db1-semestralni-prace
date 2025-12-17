@@ -3,7 +3,7 @@ CREATE TABLE caretakers
     id INT GENERATED ALWAYS AS IDENTITY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
-    email email NOT NULL,
+    email mail NOT NULL,
     phone phone_cz NOT NULL,
     info TEXT,
 
