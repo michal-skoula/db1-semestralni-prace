@@ -38,7 +38,7 @@ CREATE TABLE feed_items
 (
     id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(100) NOT NULL,
-    qty_available INT NOT NULL, -- TODO: prevent creation of feed event when 0
+    qty_available INT NOT NULL DEFAULT 0, -- TODO: prevent creation of feed event when 0
     description TEXT,
 
     CONSTRAINT pk_feed_items PRIMARY KEY (id),
@@ -52,7 +52,7 @@ CREATE TABLE medications
     id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(100) NOT NULL,
     instructions TEXT NOT NULL,
-    qty_available INT NOT NULL, -- TODO: prevent creation of medication event when 0
+    qty_available INT NOT NULL DEFAULT 0, -- TODO: prevent creation of medication event when 0
     description TEXT,
 
     CONSTRAINT pk_medications PRIMARY KEY (id),

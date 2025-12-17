@@ -1,3 +1,11 @@
+DROP VIEW IF EXISTS
+    v_caretakers_with_animals,
+    v_caretakers_without_animals,
+    v_caretakers_with_full_name,
+    v_feeding_event_detail,
+    v_treatments_detail
+;
+
 DROP TABLE IF EXISTS
     animals,
     caretakers,
