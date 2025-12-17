@@ -4,7 +4,8 @@ DROP VIEW IF EXISTS
     v_feeding_event_detail,
     v_treatments_detail,
     v_caretakers_with_animals,
-    v_caretakers_full_name
+    v_caretakers_full_name,
+    v_animals_with_habitat
 ;
 
 DROP TABLE IF EXISTS

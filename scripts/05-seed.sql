@@ -98,10 +98,9 @@ INSERT INTO animal_caretaker (animal_id, caretaker_id) VALUES
 (3, 8),
 (3, 9),
 
-(4, 2),
 (4, 4),
 
-(5, 6),
+(5, 1),
 (5, 10),
 (5, 3),
 
