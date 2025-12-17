@@ -1,11 +1,10 @@
--- BEGIN;
 DROP VIEW IF EXISTS
     v_caretakers_without_animals,
     v_caretaker_responsibilities,
     v_feeding_event_detail,
     v_treatments_detail,
     v_caretakers_with_animals,
-    v_caretakers_detailed
+    v_caretakers_full_name
 ;
 
 DROP TABLE IF EXISTS
@@ -37,5 +36,3 @@ DROP INDEX IF EXISTS
     idx_feeding_events_fed_at,
     idx_treatments_administered_at
 ;
-
--- COMMIT;

@@ -90,39 +90,31 @@ VALUES
 -- ANIMAL ↔ CARETAKER (pivot) (>=10 rows)
 -- =====================
 INSERT INTO animal_caretaker (animal_id, caretaker_id) VALUES
--- Simba (lev) - hlavní + noční
-(1, 1),
-(1, 3),
-
--- Nala (lvice) - hlavní + záskok
 (2, 1),
 (2, 5),
 
--- Nanuq (lední medvěd) - hlavní + vet asistentka
 (3, 1),
 (3, 4),
+(3, 8),
+(3, 9),
 
--- Azura (leguán) - plazy + vet
 (4, 2),
 (4, 4),
 
--- Kiki (ara) - ptáci + záskok
 (5, 6),
 (5, 10),
+(5, 3),
 
--- Bublina (rejnok) - akvárium + záskok
+
 (6, 5),
 (6, 7),
 
--- Sahara (fenek) - poušť + noční
 (7, 7),
-(7, 3),
 
--- Míša (koza) - dětská zoo + admin (protože realita je chaos)
 (8, 9),
 (8, 8),
+(8, 1),
 
--- Roko (kozorožec) - hlavní + záskok
 (9, 1),
 (9, 10),
 

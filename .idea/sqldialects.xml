@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/01-domains.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/02-schema.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/03-indexes.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/04-views.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/05-seed.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/99-reset.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/01-domains.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/02-schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/03-indexes.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/04-views.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/05-seed.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/scripts/99-reset.sql" dialect="PostgreSQL" />
     <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>

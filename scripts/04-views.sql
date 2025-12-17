@@ -1,5 +1,5 @@
 -- Helper view to not retype the concatenation every time
-CREATE VIEW v_caretakers_detailed AS
+CREATE VIEW v_caretakers_full_name AS
 SELECT
     *,
     first_name || ' ' || last_name AS full_name
@@ -16,7 +16,7 @@ SELECT
     a.name as managed_animal_name,
     a.species as managed_animal_species,
     h.name as animal_habitat_name
-FROM v_caretakers_detailed c
+FROM v_caretakers_full_name c
 LEFT JOIN animal_caretaker ac
     ON c.id = ac.caretaker_id
 LEFT JOIN animals a
@@ -37,7 +37,7 @@ SELECT
     c.id as caretaker_id,
     c.full_name as caretaker_name,
     COUNT(ac.caretaker_id) as managed_animals_count
-FROM v_caretakers_detailed c
+FROM v_caretakers_full_name c
 LEFT JOIN animal_caretaker ac
     ON ac.caretaker_id = c.id
 GROUP BY c.id, c.full_name;
@@ -56,7 +56,7 @@ SELECT
 FROM treatments t
 INNER JOIN animals a
     ON t.animal_id = a.id
-INNER JOIN v_caretakers_detailed c
+INNER JOIN v_caretakers_full_name c
     ON t.caretaker_id = c.id;
 
 -- List of all feeding events, animal being and responsible caretaker
@@ -72,5 +72,5 @@ SELECT
 FROM feeding_events f
 INNER JOIN animals a
     ON f.animal_id = a.id
-INNER JOIN v_caretakers_detailed c
+INNER JOIN v_caretakers_full_name c
     ON f.caretaker_id = c.id
