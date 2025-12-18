@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
-    <file url="file://$PROJECT_DIR$/scenarios/01-adding_new_animal.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/01-domains.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/02-schema.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/03-indexes.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/04-views.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/05-seed.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
-    <file url="file://$PROJECT_DIR$/scripts/99-reset.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/cleanup.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/data/seed.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/model/01-domains.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/model/02-schema.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/model/03-indexes.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/pohledy/views.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
+    <file url="file://$PROJECT_DIR$/scenare/01-adding_new_animal.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/74bc7e4f-bbc4-46b1-9912-3534ba5daf7c/console.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/74bc7e4f-bbc4-46b1-9912-3534ba5daf7c/console_1.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/74bc7e4f-bbc4-46b1-9912-3534ba5daf7c/console_2.sql" value="74bc7e4f-bbc4-46b1-9912-3534ba5daf7c" />
