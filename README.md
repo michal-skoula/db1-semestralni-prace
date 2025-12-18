@@ -1,5 +1,5 @@
 # DB1 - Management zoologické zahrady
-> Testováno na PostgreSQL 18.0.1 v Dockerizovaném kontejneru, image postgres:latest
+> Testováno na PostgreSQL (verze 18.0.1) v Docker kontejneru (image postgres:latest)
 
 [Github repozitář](https://github.com/michal-skoula/db1-semestralni-prace)
 
