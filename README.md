@@ -1,31 +1,19 @@
-# Projekt DB1: Management systém pro zoologickou zahradu
+# DB1 - Management zoologické zahrady
+> Testováno na PostgreSQL 18.0.1 v Dockerizovaném kontejneru, image postgres:latest
 
-Testováno na Databázovém systému postgres verze 18, snažil jsem se ovšem o co nejuniverzálnější SQL kód a kde to dávalo smysl se vyhnout se "SŘBD specifickým vychytávkám"
+[Github repozitář](https://github.com/michal-skoula/db1-semestralni-prace)
 
-použití domén pro dodržení DRY
+## Použité zdroje informací
+- PostgreSQL dokumentace
+- StackOverflow
+- ChatGPT (konzultační nástroj & osobitější StackOverflow)
 
-pro zjednodušení a vyzkoušení si pokročilejších integritních omezení jsou jednotky léků a krmiva prostě "ks". Zároveň není implementovaný "ledger" stavů skladu s jídlem a léky, tzn. jsou zde dva zdroje pravdy a musí se vždy odečíst manuálně při použití.
-
-Oproti odevzdanému schématu jsem našel místa pro zlepšení a změnil názvy do angličtiny pro lepší čitelnost, posílám tedy i upravené schéma v DBDiagramu
-
-
-#### SQL skripty, které ve zvoleném SŘBD:
-- [x] založí **fyzický datový model**,  
-- [x] naplní datový model **testovacími / ukázkovými daty**,  
-- [x] založí **databázové pohledy**,  
-- [ ] reprezentují **alespoň dva testovací scénáře** (každý scénář v samostatném skriptu),  
-- [x] zruší **fyzický datový model včetně databázových pohledů**.
-
-#### Dokumentaci
-- ve formátu **PDF**.
-
-## Použité zdroje
-- Dokumentace postgresql
-- DBDiagram
-- Regex101
-- github mnestorov/regex-patterns
-- Stack Overflow
-- GPT 5.2 a Claude Sonnet 4.5
+## Použité nástroje
+- **DBDiagram:** Návrh úvodního schématu a grafická reprezentace schématu
+- **DataGrip:** IDE pro tvorbu skriptů
+- **Regex101 a repozitář mnestorov/regex-patterns:** Tvorba a debugging RegEx výrazů 
+- **Claude Code:** Tvorba dokumentace a vylepšení komentářů kódu
+- **md-to-pdf:** Převod dokumentů v `/docs` do finální pdf podoby
 
 ## Použití AI
 AI nástroje byly v projektu využity jako podpůrný prostředek, zejména pro rutinní a technické činnosti.
@@ -33,15 +21,14 @@ AI nástroje byly v projektu využity jako podpůrný prostředek, zejména pro 
 > **Klíčová návrhová rozhodnutí byla provedena samostatně.**
 
 ### AI bylo použito pro:
-- generování a úpravu DBML schématu na základě existujícího SQL návrhu
-- návrh indexů pro cizí klíče
-- vytvoření ukázkových seed dat
-- vysvětlení vybraných databázových konceptů a syntaxe
-- debugging a dodatečnou kontrolu řešení
-- jazykovou a syntaktickou korekturu tohoto README
+- Úpravu DBDiagram schématu pro kompletní shhodu s SQL návrhem
+- Tvorbu finální dokumentace k projektu a vybraných komentářů v kódu
+- Vytvoření ukázkových seed dat
+- Dodatečnou kontrolu řešení
+- Jazykovou a syntaktickou korekturu dokumentace, README a komentářů
 
 ### AI nebylo použito pro:
-- návrh databázového modelu a jeho vztahů
-- rozhodování o integritních omezeních
-- přímé generování SQL skriptů bez porozumění (tzv. „vibe coding“)
+- Návrh databázového modelu a jeho vztahů
+- Rozhodování o integritních omezeních
+- Přímé generování SQL skriptů bez porozumění (tzv. „vibe coding“)
 

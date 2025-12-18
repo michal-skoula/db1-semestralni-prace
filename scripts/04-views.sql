@@ -2,7 +2,7 @@
 CREATE VIEW v_caretakers_full_name AS
 SELECT
     *,
-    first_name || ' ' || last_name AS full_name
+    concat(first_name, ' ', last_name) AS full_name
 FROM caretakers;
 
 -- Animals with their habitats
@@ -86,7 +86,7 @@ INNER JOIN v_caretakers_full_name c
 INNER JOIN medications m
     ON t.medication_id = m.id;
 
--- List of all feeding events, animal being and responsible caretaker
+-- List of all feeding events, animal being fed and responsible caretaker
 CREATE VIEW v_feeding_event_detail AS
 SELECT
     f.id as feeding_event_id,

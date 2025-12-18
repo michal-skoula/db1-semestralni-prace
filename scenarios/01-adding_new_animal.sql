@@ -1,6 +1,4 @@
 -- Scénář 1: Příchod nového zvířete do ZOO
--- Demonstrace přidání nového zvířete, výběru výběhu a přiřazení ošetřovatele.
-
 
 -- Krok 1: Výběr vhodného výběhu pro novou zebru
 

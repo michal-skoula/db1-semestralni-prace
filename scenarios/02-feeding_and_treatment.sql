@@ -1,7 +1,4 @@
 -- Scénář 2: Krmení zvířete a následné veterinární ošetření
--- Demonstrace krmení, při kterém je objevena zdravotní komplikace.
--- Scénář ukazuje práci s transakcemi a aktualizaci skladových zásob.
-
 
 -- Krok 1: Výběr ošetřovatele pro krmení
 -- Hledáme nejméně vytíženého ošetřovatele.

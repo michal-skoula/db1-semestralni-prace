@@ -1,3 +1,3 @@
--- psql -f _reset.sql
+-- psql -f reset.sql
 
 \i 'scripts/99-reset.sql'

@@ -1,4 +1,4 @@
--- psql -f _setup.sql
+-- psql -f setup.sql
 
 \i 'scripts/99-reset.sql'
 \i 'scripts/00-users.sql'

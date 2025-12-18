@@ -59,6 +59,7 @@ Table treatments {
 Table animal_caretaker {
   animal_id int [not null]
   caretaker_id int [not null]
+  assigned_at timestamp [default: `now()`]
 
   indexes {
     (animal_id, caretaker_id) [pk]
